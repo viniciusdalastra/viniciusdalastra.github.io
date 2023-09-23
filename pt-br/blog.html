@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vinícius Dalastra</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/d117d9c272.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
+        $navbarBurgers.forEach((el) => {
+          el.addEventListener("click", () => {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            el.classList.toggle("is-active");
+            $target.classList.toggle("is-active");
+          });
+        });
+      });
+      $(document).ready(function () {
+        $(".navbar-burger").click(function () {
+          $(".navbar-burger").toggleClass("is-active");
+          $(".navbar-menu").toggleClass("is-active");
+        });
+      });
+    </script>
+    <style>
+      p {
+        text-align: justify;
+        overflow-wrap: break-word;
+      }
+
+      .title {
+        color: #d63f6f !important;
+      }
+      .navbar-item {
+        color: #d63f6f !important;
+        font-weight: 500;
+      }
+
+      .tag {
+        background-color: #d63f6f !important;
+        color: #fff !important;
+        font-weight: 500;
+      }
+
+      .best-dark-colors {
+        background: #2b1d38;
+        color: #e2e2e2;
+      }
+
+      .xp-icon {
+        max-width: 128px;
+        max-height: 128px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar is-transparent is-fixed-top best-dark-colors">
+        <div id="navbarPortifolio" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="https://viniciusdalastra.github.io/">
+              Home
+            </a>
+            <a class="navbar-item" href="blog.html"> Blog </a>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="navbar-item"
+              href="https://viniciusdalastra.github.io/pt-br/index.html"
+            >
+              <img src="br.svg" alt="PT-BR" style="height: 28px; width: 28px" />
+            </a>
+            <a class="navbar-item" href="https://viniciusdalastra.github.io/">
+              <img
+                src="eua.svg"
+                alt="EN-USA"
+                style="height: 28px; width: 28px"
+              />
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section
+      class="section is-12"
+      style="background: #1d1127; min-height: 100vh"
+    >
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-parent is-3">
+          <div class="tile is-child">
+            <div class="card best-dark-colors">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="img1.jpg" alt="Profile Image" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <span class="title is-4">Vinícius Dalastra</span>
+                  </div>
+                </div>
+                <div class="content">
+                  <p>Full Stack Developer</p>
+                  <p>+55 (47) 99643-4266</p>
+                  <p>viniciusdalastra@hotmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tile is-ancestor is-8" style="margin-top: 0px">
+          <div class="tile is-parent is-vertical">
+            <div class="tile is-child box best-dark-colors">
+              <h2 class="title is-6 is-spaced">Posts</h2>
+              <div class="content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
