@@ -1,321 +1,911 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Vinícius Dalastra</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/d117d9c272.js"
-      crossorigin="anonymous"
-    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Vinícius Dalastra — Senior Full-Stack Engineer</title>
+    <meta name="description" content="Senior Full-Stack Engineer with 10+ years building scalable, secure platforms: payments, real-time messaging, microservices, APIs and cloud (AWS/Azure)." />
+    <meta name="author" content="Vinícius Dalastra" />
+    <meta name="theme-color" content="#0A1526" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://viniciusdalastra.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://viniciusdalastra.github.io/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://viniciusdalastra.github.io/pt-br/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://viniciusdalastra.github.io/" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const $navbarBurgers = Array.prototype.slice.call(
-          document.querySelectorAll(".navbar-burger"),
-          0
-        );
-        $navbarBurgers.forEach((el) => {
-          el.addEventListener("click", () => {
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-            el.classList.toggle("is-active");
-            $target.classList.toggle("is-active");
-          });
-        });
-      });
-      $(document).ready(function () {
-        $(".navbar-burger").click(function () {
-          $(".navbar-burger").toggleClass("is-active");
-          $(".navbar-menu").toggleClass("is-active");
-        });
-      });
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Vinícius Dalastra — Senior Full-Stack Engineer" />
+    <meta property="og:description" content="Senior Full-Stack Engineer with 10+ years building scalable, secure platforms: payments, real-time messaging, microservices, APIs and cloud (AWS/Azure)." />
+    <meta property="og:url" content="https://viniciusdalastra.github.io/" />
+    <meta property="og:image" content="https://viniciusdalastra.github.io/profile.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Vin\u00edcius Dalastra",
+  "jobTitle": "Senior Full-Stack Engineer",
+  "email": "mailto:viniciusdalastra@hotmail.com",
+  "telephone": "+5547996434266",
+  "url": "https://viniciusdalastra.github.io/",
+  "image": "https://viniciusdalastra.github.io/profile.jpg",
+  "address": {"@type": "PostalAddress", "addressCountry": "BR", "addressRegion": "Santa Catarina"},
+  "sameAs": [
+    "https://www.linkedin.com/in/dalastraa",
+    "https://github.com/viniciusdalastra",
+    "https://altovaleia.com"
+  ],
+  "knowsLanguage": ["pt-BR", "en"],
+  "knowsAbout": ["Node.js", "TypeScript", "NestJS", "Angular", "React", "Microservices", "MongoDB", "PostgreSQL", "AWS", "Azure", "Payment Gateways", "Artificial Intelligence"]
+}
     </script>
     <style>
-      p {
-        text-align: justify;
-        overflow-wrap: break-word;
-      }
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#0A1526;--bg-deep:#060E1B;--surface:rgba(255,255,255,.035);--surface-2:rgba(255,255,255,.06);
+  --line:rgba(147,180,224,.15);--line-strong:rgba(147,180,224,.3);
+  --text:#E8EFF9;--muted:#93A7C4;--dim:#6F84A3;
+  --brand:#2E6FB8;--brand-bright:#5AA6F2;--accent:#3FD9C6;
+  --radius:18px;--radius-sm:12px;--maxw:1120px;
+  --shadow:0 22px 60px rgba(2,8,20,.55);
+  --font:"Inter","SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(900px 520px at 78% -8%,rgba(46,111,184,.28),transparent 62%),
+    radial-gradient(760px 480px at 4% 12%,rgba(63,217,198,.10),transparent 60%),
+    radial-gradient(1000px 700px at 50% 108%,rgba(46,111,184,.14),transparent 65%),
+    var(--bg-deep)}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{line-height:1.2;margin:0;letter-spacing:-.02em;font-weight:700}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--brand-bright);outline-offset:3px;border-radius:6px}
 
-      .title {
-        color: #d63f6f !important;
-      }
-      .navbar-item {
-        color: #d63f6f !important;
-        font-weight: 500;
-      }
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:22px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--brand);color:#fff;padding:10px 16px;border-radius:0 0 10px 0;z-index:99}
+.skip:focus{left:0}
 
-      .tag {
-        background-color: #d63f6f !important;
-        color: #fff !important;
-        font-weight: 500;
-      }
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:60;background:rgba(8,18,33,.72);
+  -webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);
+  border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;height:68px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:700;letter-spacing:-.02em;
+  white-space:nowrap;min-width:0;flex:0 1 auto;overflow:hidden}
+.brand>span{min-width:0;overflow:hidden}
+.brand-mark{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--brand),var(--brand-bright));color:#fff;font-size:.85rem;font-weight:800;letter-spacing:.04em;
+  box-shadow:0 8px 20px rgba(46,111,184,.4)}
+.brand-name{display:block;font-size:.98rem;overflow:hidden;text-overflow:ellipsis}
+.brand-role{display:block;font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:0}
+.nav-links{display:flex;align-items:center;gap:4px;margin-left:auto}
+.nav-links a{position:relative;text-decoration:none;color:var(--muted);font-size:.9rem;font-weight:500;padding:9px 12px;border-radius:9px;transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--text);background:var(--surface)}
+.nav-links a.is-active{color:var(--text)}
+.nav-links a.is-active::after{content:"";position:absolute;left:12px;right:12px;bottom:3px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--brand),var(--brand-bright))}
+.nav-links a.ext{color:#BBD6F6}
+.nav-tools{display:flex;align-items:center;flex:0 0 auto;gap:10px;padding-left:6px;margin-left:6px;border-left:1px solid var(--line)}
+.lang{display:flex;gap:6px}
+.lang a{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;border:1px solid transparent;opacity:.5;transition:.2s}
+.lang a:hover{opacity:1;background:var(--surface)}
+.lang a.is-active{opacity:1;border-color:var(--line-strong);background:var(--surface)}
+.lang img{width:20px;height:20px;border-radius:3px}
+.burger{display:none;width:40px;height:40px;border-radius:11px;border:1px solid var(--line);background:var(--surface);cursor:pointer;padding:0;place-items:center}
+.burger span{display:block;width:17px;height:2px;border-radius:2px;background:var(--text);transition:.25s}
+.burger span+span{margin-top:4px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 
-      .best-dark-colors {
-        background: #2b1d38;
-        color: #e2e2e2;
-      }
+/* ---------- section chrome ---------- */
+section{scroll-margin-top:88px}
+.band{padding:74px 0}
+.band-tight{padding:52px 0}
+.sec-head{margin-bottom:32px;max-width:720px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--accent),transparent)}
+.sec-head h2{font-size:clamp(1.6rem,3.2vw,2.2rem)}
+.sec-head p{color:var(--muted);margin-top:12px}
 
-      .xp-icon {
-        max-width: 128px;
-        max-height: 128px;
-      }
-    </style>
+.card{background:linear-gradient(180deg,var(--surface),rgba(255,255,255,.012));border:1px solid var(--line);
+  border-radius:var(--radius);padding:26px}
+
+/* ---------- hero ---------- */
+.hero{padding:64px 0 20px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:52px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:9px;padding:7px 14px;border-radius:999px;font-size:.8rem;font-weight:600;
+  color:#CFE6D8;background:rgba(63,217,198,.1);border:1px solid rgba(63,217,198,.28)}
+.status .dot{width:7px;height:7px;border-radius:50%;background:#3FD9C6;box-shadow:0 0 0 4px rgba(63,217,198,.18)}
+.hero h1{font-size:clamp(2.3rem,5.6vw,3.5rem);margin:20px 0 0;letter-spacing:-.035em}
+.hero h1 .grad{background:linear-gradient(100deg,var(--brand-bright),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-role{margin-top:14px;font-size:clamp(1.02rem,2.2vw,1.2rem);font-weight:600;color:#C7D9F1}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.hero-lead{color:var(--muted);margin-top:20px;max-width:60ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
+
+.portrait-wrap{position:relative;width:min(370px,100%);margin-inline:auto}
+.portrait-wrap::after{content:"";position:absolute;inset:-13% 0 -16%;z-index:0;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(46,111,184,.6),transparent 72%);filter:blur(26px)}
+.portrait{position:relative;z-index:1;aspect-ratio:1;border-radius:26px;overflow:hidden;
+  border:1px solid var(--line-strong);box-shadow:var(--shadow);background:#16233a}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.portrait::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(6,14,27,.55));pointer-events:none}
+.portrait-badge{position:absolute;z-index:2;left:50%;bottom:-20px;transform:translateX(-50%);white-space:nowrap;
+  display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;font-size:.82rem;font-weight:600;
+  background:rgba(9,19,35,.9);border:1px solid var(--line-strong);box-shadow:var(--shadow);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.portrait-badge b{color:var(--brand-bright)}
+
+/* ---------- buttons / pills ---------- */
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;font-size:.92rem;font-weight:600;
+  text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s}
+.btn svg{width:17px;height:17px;flex:0 0 auto}
+.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-bright));color:#fff;box-shadow:0 12px 28px rgba(46,111,184,.38)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(46,111,184,.5)}
+.btn-ghost{border-color:var(--line-strong);color:var(--text);background:var(--surface)}
+.btn-ghost:hover{transform:translateY(-2px);border-color:var(--brand-bright);background:var(--surface-2)}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:6px 13px;border-radius:999px;font-size:.79rem;font-weight:600;
+  color:#C3D6EE;background:var(--surface);border:1px solid var(--line)}
+.tag{display:inline-block;padding:5px 11px;border-radius:999px;font-size:.755rem;font-weight:600;letter-spacing:.01em;
+  color:#BBD6F6;background:rgba(90,166,242,.12);border:1px solid rgba(90,166,242,.22)}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+.stat{padding:22px;border-radius:var(--radius-sm);border:1px solid var(--line);background:linear-gradient(180deg,var(--surface),rgba(255,255,255,.01))}
+.stat b{display:block;font-size:clamp(1.5rem,3.4vw,1.95rem);letter-spacing:-.03em;
+  background:linear-gradient(120deg,#fff,var(--brand-bright));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{display:block;margin-top:6px;font-size:.83rem;color:var(--muted);line-height:1.45}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:26px;align-items:start}
+.about-grid p+p{margin-top:14px}
+.about-grid .card p{color:var(--muted)}
+.facts{display:grid;gap:0}
+.facts li{display:flex;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px dashed var(--line);font-size:.9rem}
+.facts li:last-child{border-bottom:0;padding-bottom:0}
+.facts span{color:var(--dim)}
+.facts b{font-weight:600;text-align:right}
+
+/* ---------- stack ---------- */
+.stack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stack-grid h3{font-size:.98rem;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.stack-ico{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;flex:0 0 auto;
+  background:rgba(90,166,242,.13);border:1px solid rgba(90,166,242,.22);color:var(--brand-bright)}
+.stack-ico svg{width:16px;height:16px}
+
+/* ---------- timeline ---------- */
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:"";position:absolute;left:9px;top:14px;bottom:14px;width:2px;border-radius:2px;
+  background:linear-gradient(180deg,var(--brand-bright),rgba(46,111,184,.35) 55%,transparent)}
+.tl-item{position:relative}
+.tl-item+.tl-item{margin-top:18px}
+.tl-item::before{content:"";position:absolute;left:-28px;top:34px;width:11px;height:11px;border-radius:50%;
+  background:var(--brand-bright);box-shadow:0 0 0 4px rgba(90,166,242,.16)}
+.tl-head{display:flex;align-items:flex-start;gap:15px;flex-wrap:wrap}
+.logo-tile{width:54px;height:54px;flex:0 0 auto;border-radius:15px;background:#fff;display:grid;place-items:center;padding:8px;overflow:hidden}
+.logo-tile img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.logo-tile.mono{background:linear-gradient(135deg,var(--brand),var(--brand-bright));color:#fff;font-weight:800;font-size:1.3rem;padding:0}
+.tl-titles{flex:1 1 260px;min-width:0}
+.tl-titles h3{font-size:1.06rem}
+.tl-org{margin-top:4px;font-size:.9rem;color:var(--brand-bright);font-weight:600}
+.tl-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:4px;font-size:.8rem;color:var(--dim)}
+.tl-meta .sep{opacity:.5}
+.period{flex:0 0 auto;padding:6px 13px;border-radius:999px;font-size:.76rem;font-weight:600;color:#C3D6EE;
+  background:var(--surface);border:1px solid var(--line);white-space:nowrap}
+.bullets{margin-top:16px;display:grid;gap:9px}
+.bullets li{position:relative;padding-left:22px;color:var(--muted);font-size:.925rem}
+.bullets li::before{content:"";position:absolute;left:3px;top:.62em;width:6px;height:6px;border-radius:50%;
+  background:linear-gradient(135deg,var(--brand-bright),var(--accent))}
+.bullets li b{color:var(--text);font-weight:600}
+.tl-tech{margin-top:16px;padding-top:15px;border-top:1px dashed var(--line)}
+.subroles{margin-top:18px;display:grid;gap:16px}
+.subrole{padding-left:16px;border-left:2px solid var(--line)}
+.subrole-head{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;justify-content:space-between}
+.subrole-head h4{font-size:.95rem}
+.subrole-head .yrs{font-size:.76rem;color:var(--dim);font-weight:600}
+
+/* ---------- projects ---------- */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.proj{display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
+.proj:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+.proj .kicker{font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.proj h3{font-size:1.05rem;margin-top:10px}
+.proj p{color:var(--muted);font-size:.92rem;margin-top:12px;flex:1}
+.metric{margin-top:18px;padding-top:15px;border-top:1px dashed var(--line);display:flex;gap:18px;flex-wrap:wrap}
+.metric div{min-width:0}
+.metric b{display:block;font-size:1.05rem;color:var(--brand-bright);letter-spacing:-.02em}
+.metric span{font-size:.76rem;color:var(--dim)}
+
+/* ---------- feature (alto vale ia) ---------- */
+.feature{position:relative;border-radius:22px;padding:1px;background:linear-gradient(120deg,rgba(90,166,242,.55),rgba(63,217,198,.4),rgba(90,166,242,.12))}
+.feature-in{border-radius:21px;padding:34px;background:linear-gradient(140deg,#0C1B31,#0A1526 60%);
+  display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.feature h2{font-size:clamp(1.4rem,3vw,1.85rem)}
+.feature p{color:var(--muted);margin-top:12px;max-width:62ch}
+.feature .tags{margin-top:18px}
+.feature-side{display:grid;gap:12px;justify-items:stretch;min-width:230px}
+.domain{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:14px;
+  font-weight:700;letter-spacing:-.01em;background:rgba(90,166,242,.1);border:1px solid rgba(90,166,242,.28);color:#DCEBFF}
+
+/* ---------- education ---------- */
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.edu{display:flex;gap:15px;align-items:flex-start}
+.edu h3{font-size:.98rem;line-height:1.35}
+.edu .tl-org{margin-top:6px}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ccard{display:flex;flex-direction:column;gap:4px;text-decoration:none;padding:22px;border-radius:var(--radius-sm);
+  border:1px solid var(--line);background:linear-gradient(180deg,var(--surface),rgba(255,255,255,.01));transition:.25s}
+.ccard:hover{transform:translateY(-3px);border-color:var(--brand-bright);background:var(--surface-2)}
+.ccard .ci{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;margin-bottom:12px;
+  background:rgba(90,166,242,.13);border:1px solid rgba(90,166,242,.22);color:var(--brand-bright)}
+.ccard .ci svg{width:18px;height:18px}
+.ccard span{font-size:.78rem;color:var(--dim)}
+.ccard b{font-size:.93rem;font-weight:600;overflow-wrap:anywhere}
+
+/* ---------- footer ---------- */
+.site-footer{border-top:1px solid var(--line);margin-top:36px;padding:30px 0 40px}
+.foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;font-size:.85rem;color:var(--dim)}
+.foot-links{display:flex;flex-wrap:wrap;gap:16px}
+.foot-links a{text-decoration:none;color:var(--muted);transition:color .2s}
+.foot-links a:hover{color:var(--brand-bright)}
+
+/* ---------- reveal ---------- */
+.js .reveal{opacity:0;transform:translateY(16px)}
+.js .reveal.is-in{opacity:1;transform:none;transition:opacity .65s ease,transform .65s ease}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-grid .hero-copy{order:1}
+  .portrait-wrap{order:0;width:min(300px,80%)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .about-grid,.stack-grid,.proj-grid,.edu-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:repeat(2,1fr)}
+  .feature-in{grid-template-columns:1fr;padding:28px}
+}
+@media (max-width:1000px){
+  .burger{display:grid}
+  .nav-links{position:absolute;left:0;right:0;top:68px;flex-direction:column;align-items:stretch;gap:2px;
+    padding:14px 22px 20px;background:rgba(8,18,33,.97);border-bottom:1px solid var(--line);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);display:none}
+  .nav-links.is-open{display:flex}
+  .nav-links a{padding:12px 10px;font-size:.98rem}
+  .nav-links a.is-active::after{display:none}
+  .nav-tools{margin-left:auto;border-left:0;padding-left:0}
+  .brand-role{display:none}
+}
+@media (max-width:420px){
+  .wrap{padding-inline:16px}
+  .nav{gap:10px}
+  .brand-mark{width:32px;height:32px;border-radius:10px;font-size:.78rem}
+  .brand-name{font-size:.9rem}
+  .lang a{width:28px;height:28px}
+  .lang img{width:18px;height:18px}
+  .burger{width:36px;height:36px}
+  .nav-links{top:60px}
+  .site-header .nav{height:60px}
+}
+@media (max-width:640px){
+  .band{padding:56px 0}
+  .hero{padding:44px 0 12px}
+  .card{padding:22px}
+  .timeline{padding-left:24px}
+  .tl-item::before{left:-20px}
+  .timeline::before{left:5px}
+  .contact-grid{grid-template-columns:1fr}
+  .metric{gap:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  .js .reveal{opacity:1;transform:none}
+}
+
+/* ---------- print (CV) ---------- */
+@media print{
+  @page{margin:14mm}
+  body{background:#fff;color:#111;font-size:10.5pt}
+  body::before,.site-header,.burger,.hero-cta,.site-footer,.portrait-badge,.feature-side{display:none!important}
+  .band,.hero{padding:10px 0;break-inside:avoid}
+  .wrap{max-width:none;padding:0}
+  .card,.stat,.feature-in,.ccard{border:1px solid #d5dbe4;background:#fff;box-shadow:none;padding:12px}
+  .feature{background:none;padding:0}
+  h1,h2,h3,h4{color:#0A1526}
+  .hero h1 .grad,.stat b{-webkit-text-fill-color:#0A1526;color:#0A1526}
+  .tag,.pill,.period{background:#eef3fa;color:#20344f;border-color:#cbd8e8}
+  .tl-org,.metric b,.eyebrow{color:#2E6FB8}
+  p,.bullets li,.stat span,.ccard span{color:#33445c}
+  .portrait-wrap{width:130px}
+  .portrait-wrap::after{display:none}
+  .tl-item,.proj,.edu{break-inside:avoid}
+  a{text-decoration:none}
+}
+</style>
   </head>
-
   <body>
-    <header>
-      <nav class="navbar is-transparent is-fixed-top best-dark-colors">
-        <div class="navbar-brand">
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarPortifolio"
-          >
-            <span aria-hidden="true" style="color: white !important"></span>
-            <span aria-hidden="true" style="color: white !important"></span>
-            <span aria-hidden="true" style="color: white !important"></span>
-          </a>
-        </div>
-        <div id="navbarPortifolio" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="https://viniciusdalastra.github.io/">
-              Home
-            </a>
-            <a class="navbar-item" href="blog.html"> Blog </a>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap nav">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">VD</span>
+          <span>
+            <span class="brand-name">Vinícius Dalastra</span>
+            <span class="brand-role">Senior Full-Stack Engineer</span>
+          </span>
+        </a>
+        <nav id="nav-links" class="nav-links" aria-label="Menu">
+            <a href="#about">About</a>
+            <a href="#stack">Stack</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+            <a class="ext" href="https://altovaleia.com" target="_blank" rel="noopener">Alto Vale IA ↗</a>
+        </nav>
+        <div class="nav-tools">
+          <div class="lang">
+            <a href="pt-br/index.html" class="" aria-label="Portuguese version" title="Português"><img src="br.svg" alt="PT-BR" width="20" height="20" /></a>
+            <a href="index.html" class="is-active" aria-label="English version" title="English"><img src="eua.svg" alt="EN" width="20" height="20" /></a>
           </div>
-          <div class="navbar-end">
-            <a
-              class="navbar-item"
-              href="https://viniciusdalastra.github.io/pt-br/index.html"
-            >
-              <img src="br.svg" alt="PT-BR" style="height: 28px; width: 28px" />
-            </a>
-            <a class="navbar-item" href="https://viniciusdalastra.github.io/">
-              <img
-                src="eua.svg"
-                alt="EN-USA"
-                style="height: 28px; width: 28px"
-              />
-            </a>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <section class="section is-12" style="background: #1d1127">
-      <div class="tile is-ancestor">
-        <div class="tile is-vertical is-parent is-3">
-          <div class="tile is-child">
-            <div class="card best-dark-colors">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="img1.jpg" alt="Profile Image" />
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <span class="title is-4">Vinícius Dalastra</span>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>Full Stack Developer</p>
-                  <p>+55 (47) 99643-4266</p>
-                  <p>viniciusdalastra@hotmail.com</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tile is-ancestor is-8" style="margin-top: 0px">
-          <div class="tile is-parent is-vertical">
-            <div class="tile is-child box best-dark-colors">
-              <h2 class="title is-6 is-spaced">About Me</h2>
-              <div class="content">
-                <p>
-                  I am an experienced full-stack developer with over 8 years of
-                  experience in web development for the governamental sector, as
-                  well as in the architecture, design, and implementation of
-                  payment gateways for e-commerce platforms. Currently, I am
-                  immersed in an omnichannel project, utilizing a variety of
-                  technologies such as Typescript, Node.js, Nestjs, Angular,
-                  React, MongoDB and AWS.
-                </p>
-                <p>
-                  I hold a Bachelor's degree in Information Systems and a
-                  post-graduate degree in Systems Analysis and Information
-                  Security, providing me with a strong educational background. I
-                  am committed to continuous improvement and am currently
-                  focused on enhancing my skills in team leadership, as well as
-                  developing microservices-based systems with Node.js.
-                </p>
-              </div>
-            </div>
-            <div class="tile is-child box best-dark-colors">
-              <h2 class="title is-6 is-spaced">Experience</h2>
-              <div class="content is-12">
-                <div class="columns">
-                  <div
-                    class="column is-2"
-                    style="place-self: center; text-align: center"
-                  >
-                    <img class="xp-icon" src="omnismart.png" />
-                  </div>
-                  <div class="column">
-                    <p class="title is-6">Full Stack Developer</p>
-                    <p class="tag">OMNISMART</p>
-                    <p class="tag">2023 - Currently</p>
-                    <p>
-                      As a full-stack developer, I actively participated in an
-                      omnichannel project integrating various communication
-                      channels like WhatsApp, Facebook, Instagram, among others.
-                      In this project, I adopted a microservices-based
-                      architecture approach. I utilized a range of technologies
-                      including Angular, Node.js, Typescript, Nestjs, MongoDB,
-                      and AWS for the successful development of the system.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="content is-12">
-                <div class="columns">
-                  <div
-                    class="column is-2"
-                    style="place-self: center; text-align: center"
-                  >
-                    <img class="xp-icon" src="FIESC.png" />
-                  </div>
-                  <div class="column">
-                    <p class="title is-6">Teacher</p>
-                    <p class="tag">
-                      FIESC - Federação das Industrias de Santa Catarina
-                    </p>
-                    <p class="tag">2023 - 2023</p>
-                    <p>
-                      Systems Information Professor specializing in Logic
-                      Programming, Data Structures, and Algorithms. I am
-                      dedicated to imparting essential knowledge to develop
-                      strong programming skills and shaping professionals
-                      capable of tackling challenges in the technology field.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="content is-12">
-                <div class="columns">
-                  <div
-                    class="column is-2"
-                    style="place-self: center; text-align: center"
-                  >
-                    <img class="xp-icon" src="Magazord.png" />
-                  </div>
-                  <div class="column">
-                    <p class="title is-6">Full Stack Developer</p>
-                    <p class="tag">MAGAZORD</p>
-                    <p class="tag">2022-2023</p>
-                    <p>
-                      I led the analysis and development of a payment gateway,
-                      covering everything from architectural design and security
-                      measures to comprehensive structuring and coding. Within
-                      the scope of this project, I established the foundational
-                      groundwork by implementing a microservices architecture
-                      using technologies such as Nestjs, MongoDB, Postgres, and
-                      AWS. Additionally, it is important to highlight that this
-                      gateway is designed to be used by thousands of e-commerce
-                      businesses that integrate with the company's platform.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="content is-12">
-                <div class="columns">
-                  <div
-                    class="column is-2"
-                    style="place-self: center; text-align: center"
-                  >
-                    <img class="xp-icon" src="ipm.png" />
-                  </div>
-                  <div class="column">
-                    <p class="title is-6">
-                      Analyst and Full Stack Developer - Research & Technology
-                    </p>
-                    <p class="tag is-dark">IPM SISTEMAS</p>
-                    <p class="tag is-dark">2015-2022</p>
-                    <p>
-                      Over an 8-year trajectory at IPM SYSTEMS, I held positions
-                      such as Development Team Leader, Full Stack Analyst and
-                      Developer, specializing in Research and Technology.
-                      Additionally, I played a key role in the development of
-                      the company's proprietary framework. My proficiency spans
-                      a variety of technologies including PHP, PostgreSQL,
-                      Javascript, HTML, and CSS, and I maintain a strong
-                      commitment to Information Security.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tile is-child box best-dark-colors">
-              <h2 class="title is-6 is-spaced">Education</h2>
-              <div class="content is-12">
-                <div class="columns">
-                  <div
-                    class="column is-2"
-                    style="place-self: center; text-align: center"
-                  >
-                    <img class="xp-icon" src="descomplica.png" />
-                  </div>
-                  <div class="column">
-                    <p class="title is-6">
-                      Master in Business Administration - Information security
-                    </p>
-                    <p class="tag">DESCOMPLICA</p>
-                    <p class="tag">2021-2022</p>
-                  </div>
-                </div>
-              </div>
-              <div class="content is-12">
-                <div class="columns">
-                  <div
-                    class="column is-2"
-                    style="place-self: center; text-align: center"
-                  >
-                    <img class="xp-icon" src="descomplica.png" />
-                  </div>
-                  <div class="column">
-                    <p class="title is-6">
-                      Postgraduate Lato Sensu - Program Analysis and Development
-                    </p>
-                    <p class="tag">DESCOMPLICA</p>
-                    <p class="tag">2021-2022</p>
-                  </div>
-                </div>
-              </div>
-              <div class="content is-12">
-                <div class="columns">
-                  <div
-                    class="column is-2"
-                    style="place-self: center; text-align: center"
-                  >
-                    <img class="xp-icon" src="unidavi.png" />
-                  </div>
-                  <div class="column">
-                    <p class="title is-6">Bachelor of Information Systems</p>
-                    <p class="tag">UNIDAVI</p>
-                    <p class="tag">2021-2022</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <button class="burger" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
-    </section>
+    </header>
+    <main id="main">
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <span class="status"><span class="dot"></span>Open to senior / tech lead roles — Remote (LATAM)</span>
+              <h1>Vinícius <span class="grad">Dalastra</span></h1>
+              <p class="hero-role">Senior Full-Stack Engineer · Backend Specialist</p>
+              <div class="hero-tags">
+            <span class="pill">Scalable APIs</span>
+            <span class="pill">Microservices</span>
+            <span class="pill">Cloud AWS / Azure</span>
+            <span class="pill">Real-time Messaging</span>
+            <span class="pill">Payments</span>
+            <span class="pill">AI Integrations</span>
+              </div>
+              <p class="hero-lead">10+ years building scalable, secure platforms across payments, SaaS, real-time messaging, e-commerce and public-sector systems — from architecture and security to delivery and team leadership.</p>
+              <div class="hero-cta">
+                <a class="btn btn-primary" href="#contact">Get in touch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></svg></a>
+                <a class="btn btn-ghost" href="https://altovaleia.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><path d="M3 12h18M12 2.8c2.4 2.5 3.6 5.6 3.6 9.2S14.4 18.7 12 21.2c-2.4-2.5-3.6-5.6-3.6-9.2S9.6 5.3 12 2.8Z"/></svg> Alto Vale IA</a>
+                <a class="btn btn-ghost" href="https://www.linkedin.com/in/dalastraa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C21.4 8.75 22 11 22 14.1V21h-4v-6.1c0-1.46-.03-3.34-2.05-3.34-2.06 0-2.37 1.6-2.37 3.24V21h-3.6z"/></svg> LinkedIn</a>
+              </div>
+            </div>
+            <div class="portrait-wrap">
+              <div class="portrait">
+                <picture>
+                  <source srcset="profile.webp" type="image/webp" />
+                  <img src="profile.jpg" alt="Vinícius Dalastra" width="720" height="720" fetchpriority="high" />
+                </picture>
+              </div>
+              <span class="portrait-badge">Based in Brazil · <b>Remote (LATAM)</b></span>
+            </div>
+          </div>
+          <div class="stats">
+          <div class="stat reveal"><b>10+</b><span>Years shipping production software</span></div>
+          <div class="stat reveal"><b>R$1.8B+</b><span>Processed through the payment gateway</span></div>
+          <div class="stat reveal"><b>15k+</b><span>Concurrent users supported</span></div>
+          <div class="stat reveal"><b>3,000+</b><span>E-commerce platforms served</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="band">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <span class="eyebrow">About</span>
+            <h2>Engineering that holds up under scale</h2>
+          </div>
+          <div class="about-grid">
+            <div class="card reveal">
+              <p>Senior Full-Stack Engineer with 10+ years building scalable, secure platforms across payments, SaaS, real-time messaging, e-commerce and public-sector systems. I have delivered solutions supporting <b>15,000+ concurrent users</b> and backend messaging flows reaching <b>hundreds of millions of interactions</b>, and led payment systems processing <b>R$1.8B+ in transactions</b>.</p>
+              <p>My core stack is Node.js (TypeScript), NestJS and Express on the backend, Angular / React / Next.js on the frontend, with MongoDB, PostgreSQL and MS SQL Server, Docker, CI/CD and AWS &amp; Azure. I work daily with microservices, REST and Graph APIs, event-driven architecture, webhooks and WebSockets.</p>
+              <p>I also build AI integrations (GPT API, agents, automation) and use AI-assisted development tools such as Claude Code and Lovable for coding, refactoring, testing and rapid prototyping.</p>
+            </div>
+            <div class="card reveal">
+              <h3 style="font-size:.98rem;margin-bottom:8px">At a glance</h3>
+              <ul class="facts">
+                <li><span>Location</span><b>Brazil · Remote (LATAM)</b></li>
+                <li><span>Experience</span><b>10+ years</b></li>
+                <li><span>Focus</span><b>Backend &amp; Architecture</b></li>
+                <li><span>English</span><b>C1 — Advanced</b></li>
+                <li><span>Portuguese</span><b>Native</b></li>
+                <li><span>Availability</span><b>Full-time / Contract</b></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="band">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <span class="eyebrow">Core skills</span>
+            <h2>Technologies I work with</h2>
+            <p>The toolset I use to design, build and scale production systems.</p>
+          </div>
+          <div class="stack-grid">
+            <div class="card reveal">
+              <h3><span class="stack-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="18" height="7" rx="2"/><rect x="3" y="13.5" width="18" height="7" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg></span>Backend</h3>
+              <div class="tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">NestJS</span>
+                <span class="tag">Express</span>
+                <span class="tag">Microservices</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">Graph APIs</span>
+                <span class="tag">Webhooks</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">Event-driven</span>
+                <span class="tag">SOAP</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <h3><span class="stack-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="18" height="17" rx="2.5"/><path d="M3 9h18M9 9v11.5"/></svg></span>Frontend</h3>
+              <div class="tags">
+                <span class="tag">Angular</span>
+                <span class="tag">React</span>
+                <span class="tag">Next.js</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <h3><span class="stack-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3.2"/><path d="M4 6v12c0 1.8 3.6 3.2 8 3.2s8-1.4 8-3.2V6M4 12c0 1.8 3.6 3.2 8 3.2s8-1.4 8-3.2"/></svg></span>Data</h3>
+              <div class="tags">
+                <span class="tag">MongoDB</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">MS SQL Server</span>
+                <span class="tag">REDIS</span>
+                <span class="tag">SQL Optimization</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <h3><span class="stack-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18.5a4.3 4.3 0 0 1-.5-8.57 5.6 5.6 0 0 1 10.83-1.36A4.1 4.1 0 0 1 17.5 18.5Z"/></svg></span>Cloud &amp; DevOps</h3>
+              <div class="tags">
+                <span class="tag">AWS</span>
+                <span class="tag">Azure</span>
+                <span class="tag">Docker</span>
+                <span class="tag">CI/CD</span>
+                <span class="tag">GitHub</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <h3><span class="stack-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2.8 2.1 5.6 5.6 2.1-5.6 2.1L12 18.2l-2.1-5.6-5.6-2.1 5.6-2.1zM18.5 16.5l.9 2.3 2.3.9-2.3.9-.9 2.3-.9-2.3-2.3-.9 2.3-.9z"/></svg></span>AI &amp; Automation</h3>
+              <div class="tags">
+                <span class="tag">GPT API</span>
+                <span class="tag">AI Agents</span>
+                <span class="tag">Automation</span>
+                <span class="tag">Claude Code</span>
+                <span class="tag">Lovable</span>
+                <span class="tag">AI-Assisted Dev</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <h3><span class="stack-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 4.5 6v6c0 4.6 3.2 8.3 7.5 9.2 4.3-.9 7.5-4.6 7.5-9.2V6z"/><path d="m9 12 2 2 4-4"/></svg></span>Security</h3>
+              <div class="tags">
+                <span class="tag">Secure by design</span>
+                <span class="tag">LGPD / GDPR</span>
+                <span class="tag">Data protection</span>
+                <span class="tag">Access control</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="band">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <span class="eyebrow">Career</span>
+            <h2>Professional experience</h2>
+            <p>A decade across product companies, agencies, education and the public sector.</p>
+          </div>
+          <div class="timeline">
+            <article class="card tl-item reveal">
+              <div class="tl-head">
+                <div class="logo-tile mono" aria-hidden="true">U</div>
+                <div class="tl-titles">
+                  <h3>Senior Full Stack Engineer</h3>
+                  <p class="tl-org">Unidas</p>
+                  <p class="tl-meta"><span>Brazil</span><span class="sep">·</span><span>Full-Time</span></p>
+                </div>
+                <span class="period">Jan 2025 — Present</span>
+              </div>
+                <ul class="bullets">
+                  <li>Led modernization of Supplier, Negotiation and Procurement portals, migrating legacy Delphi to a web architecture via REST APIs serving <b>15,000+ suppliers</b>.</li>
+                  <li>Refactored Node.js/Angular services (JavaScript/TypeScript) to LTS versions, improving stability, security and maintainability.</li>
+                  <li>Optimized critical MS SQL procedures, reducing execution time from <b>~20s to &lt;1s</b> and improving responsiveness.</li>
+                  <li>Directed architecture and security restructuring, lowering infrastructure costs and improving sustainability.</li>
+                  <li>Managed the coexistence of legacy and web systems during migration to ensure continuity and business alignment.</li>
+                </ul>
+                <div class="tl-tech">
+                  <div class="tags">
+                    <span class="tag">Angular</span>
+                    <span class="tag">Node.js (LTS)</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Express</span>
+                    <span class="tag">MS SQL Server</span>
+                    <span class="tag">Azure</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">REST APIs</span>
+                  </div>
+                </div>
+            </article>
+            <article class="card tl-item reveal">
+              <div class="tl-head">
+                <div class="logo-tile"><img src="omnismart.png" alt="Omnismart" loading="lazy" width="54" height="54" /></div>
+                <div class="tl-titles">
+                  <h3>Tech Lead / Senior Full-Stack Engineer</h3>
+                  <p class="tl-org">Omnismart</p>
+                  <p class="tl-meta"><span>Brazil</span><span class="sep">·</span><span>Full-Time</span></p>
+                </div>
+                <span class="period">Mar 2023 — Dec 2024</span>
+              </div>
+                <ul class="bullets">
+                  <li>Led design and delivery of an omnichannel messaging platform (WhatsApp, Facebook, Instagram, Telegram, Web Widget) with AI agents using the GPT API.</li>
+                  <li>Engineered microservices and WebSocket architecture processing <b>millions of real-time messages</b> with thousands of concurrent users.</li>
+                  <li>Partnered with MongoDB official consulting to redesign the data model and indexes, cutting query latency from <b>~30s to &lt;300ms</b> across hundreds of millions of records.</li>
+                  <li>Led an <b>8-person engineering squad</b>, removing blockers and aligning delivery with product and business objectives.</li>
+                </ul>
+                <div class="tl-tech">
+                  <div class="tags">
+                    <span class="tag">Angular</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">NestJS</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Webhooks</span>
+                    <span class="tag">WebSockets</span>
+                    <span class="tag">REDIS</span>
+                    <span class="tag">GPT API</span>
+                    <span class="tag">Event-driven</span>
+                  </div>
+                </div>
+            </article>
+            <article class="card tl-item reveal">
+              <div class="tl-head">
+                <div class="logo-tile mono" aria-hidden="true">B</div>
+                <div class="tl-titles">
+                  <h3>Senior Full Stack Engineer</h3>
+                  <p class="tl-org">Bullcode</p>
+                  <p class="tl-meta"><span>Brazil</span><span class="sep">·</span><span>Freelancer</span></p>
+                </div>
+                <span class="period">Nov 2022 — Jul 2024</span>
+              </div>
+                <ul class="bullets">
+                  <li>Built full-stack systems including a <b>3D virtual fitting widget</b>, a ticketing platform and a real-estate negotiation portal with responsive cross-device UX.</li>
+                  <li>Delivered end-to-end features using modular architecture, accelerating development cycles and reducing rework.</li>
+                  <li>Implemented automated test suites with high coverage, increasing reliability and reducing production defects.</li>
+                  <li>Strengthened CI/CD practices, improving delivery speed and engineering consistency.</li>
+                </ul>
+                <div class="tl-tech">
+                  <div class="tags">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Express</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">REDIS</span>
+                    <span class="tag">CI/CD</span>
+                  </div>
+                </div>
+            </article>
+            <article class="card tl-item reveal">
+              <div class="tl-head">
+                <div class="logo-tile"><img src="FIESC.png" alt="FIESC" loading="lazy" width="54" height="54" /></div>
+                <div class="tl-titles">
+                  <h3>Systems Information Professor</h3>
+                  <p class="tl-org">FIESC</p>
+                  <p class="tl-meta"><span>Brazil</span><span class="sep">·</span><span>Part-Time</span></p>
+                </div>
+                <span class="period">May 2023 — Jun 2024</span>
+              </div>
+                <ul class="bullets">
+                  <li>Taught Logic Programming, Data Structures and Algorithms, strengthening computational thinking and software engineering foundations.</li>
+                  <li>Designed practical exercises and coding projects, increasing real-world problem-solving and algorithmic reasoning skills.</li>
+                  <li>Mentored students on complex technical challenges, preparing talent for software development careers.</li>
+                </ul>
+            </article>
+            <article class="card tl-item reveal">
+              <div class="tl-head">
+                <div class="logo-tile"><img src="Magazord.png" alt="Magazord" loading="lazy" width="54" height="54" /></div>
+                <div class="tl-titles">
+                  <h3>Senior Full Stack Engineer</h3>
+                  <p class="tl-org">Magazord</p>
+                  <p class="tl-meta"><span>Brazil</span><span class="sep">·</span><span>Full-Time</span></p>
+                </div>
+                <span class="period">Jan 2023 — Mar 2023</span>
+              </div>
+                <ul class="bullets">
+                  <li>Designed and built a scalable payment gateway for <b>3,000+ e-commerce platforms</b>, integrating multiple payment providers with secure, compliant defaults.</li>
+                  <li>Improved transaction reliability, reduced integration errors and enhanced processing scalability.</li>
+                  <li>Enabled infrastructure capable of supporting <b>R$1.8B+ in processed sales</b> across 2,500+ operations (2024), increasing client satisfaction.</li>
+                </ul>
+                <div class="tl-tech">
+                  <div class="tags">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">NestJS</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">REDIS</span>
+                    <span class="tag">CI/CD</span>
+                  </div>
+                </div>
+            </article>
+            <article class="card tl-item reveal">
+              <div class="tl-head">
+                <div class="logo-tile"><img src="ipm.png" alt="IPM Sistemas" loading="lazy" width="54" height="54" /></div>
+                <div class="tl-titles">
+                  <h3>Full Stack Engineer — career progression</h3>
+                  <p class="tl-org">IPM Sistemas</p>
+                  <p class="tl-meta"><span>Brazil</span><span class="sep">·</span><span>Full-Time</span><span class="sep">·</span><span>Intern → Specialist</span></p>
+                </div>
+                <span class="period">Jun 2015 — Dec 2022</span>
+              </div>
+                <div class="subroles">
+                  <div class="subrole">
+                    <div class="subrole-head"><h4>Specialist Full Stack Engineer</h4><span class="yrs">Jun 2021 — Dec 2022</span></div>
+                    <ul class="bullets">
+                      <li>Led internal framework modernization used company-wide, improving developer productivity, stability and architectural consistency.</li>
+                      <li>Co-developed an automated full-stack code generator (frontend screens, backend scaffolding, relational schemas end-to-end), reducing module delivery time.</li>
+                      <li>Implemented secure, high-performance defaults to prevent data exposure and support LGPD/GDPR compliance.</li>
+                      <li>Provided cross-squad technical leadership on security fixes and scalability improvements.</li>
+                    </ul>
+                  </div>
+                  <div class="subrole">
+                    <div class="subrole-head"><h4>Tech Lead &amp; Senior Full Stack Engineer</h4><span class="yrs">May 2019 — Nov 2020</span></div>
+                    <ul class="bullets">
+                      <li>Led the full product lifecycle for Transparency Portal, Digital Self-Service and Digital Process modules, improving public data availability during the pandemic.</li>
+                      <li>Optimized high-volume SQL queries over millions of government records, reducing latency and improving reliability.</li>
+                      <li>Coordinated releases and guided architecture decisions to ensure long-term maintainability.</li>
+                    </ul>
+                  </div>
+                  <div class="subrole">
+                    <div class="subrole-head"><h4>Mid-Level Full Stack Developer</h4><span class="yrs">Feb 2016 — May 2019</span></div>
+                    <ul class="bullets">
+                      <li>Delivered corrective and evolutionary improvements for public-sector accounting systems, ensuring regulatory compliance and audit readiness.</li>
+                      <li>Developed and optimized financial SQL routines and government reporting sent to federal agencies.</li>
+                      <li>Improved data accuracy and reliability, strengthening accountability workflows.</li>
+                    </ul>
+                  </div>
+                  <div class="subrole">
+                    <div class="subrole-head"><h4>Full Stack Development Intern</h4><span class="yrs">Jun 2015 — Feb 2016</span></div>
+                    <ul class="bullets">
+                      <li>Delivered new feature development and report optimizations for public accounting modules.</li>
+                      <li>Implemented performance and usability improvements, leading to promotion to Full Stack Developer in under a year.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tl-tech">
+                  <div class="tags">
+                    <span class="tag">SQL</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">REST</span>
+                    <span class="tag">SOAP</span>
+                    <span class="tag">Docker</span>
+                  </div>
+                </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="band">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <span class="eyebrow">Selected projects</span>
+            <h2>Work worth highlighting</h2>
+            <p>Three systems where architecture decisions translated directly into scale, performance and business results.</p>
+          </div>
+          <div class="proj-grid">
+            <article class="card proj reveal">
+              <span class="kicker">Magazord · 2024</span>
+              <h3>Scalable Payment Gateway Platform</h3>
+              <p>Designed and built a payment gateway serving 3,000+ e-commerce platforms, integrating multiple providers with a secure, compliant architecture.</p>
+              <div class="metric">
+                  <div><b>R$1.8B+</b><span>in processed sales</span></div>
+                  <div><b>3,000+</b><span>e-commerces</span></div>
+                  <div><b>2,500+</b><span>operations</span></div>
+              </div>
+            </article>
+            <article class="card proj reveal">
+              <span class="kicker">Omnismart · 2023–2024</span>
+              <h3>Omnichannel AI Messaging Platform</h3>
+              <p>Architected real-time microservices and WebSocket infrastructure processing millions of messages across WhatsApp, Instagram, Facebook, Telegram and Web.</p>
+              <div class="metric">
+                  <div><b>30s → 300ms</b><span>MongoDB query latency</span></div>
+                  <div><b>100M+</b><span>records</span></div>
+                  <div><b>8</b><span>engineers led</span></div>
+              </div>
+            </article>
+            <article class="card proj reveal">
+              <span class="kicker">IPM Sistemas · 2019–2022</span>
+              <h3>Government Transparency &amp; Digital Services</h3>
+              <p>Led backend optimization and modernization of public-sector digital services, improving performance across millions of government records and ensuring regulatory compliance.</p>
+              <div class="metric">
+                  <div><b>Millions</b><span>of public records</span></div>
+                  <div><b>LGPD</b><span>compliance</span></div>
+                  <div><b>3</b><span>platform modules</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="altovaleia" class="band-tight">
+        <div class="wrap">
+          <div class="feature reveal">
+            <div class="feature-in">
+              <div>
+                <span class="eyebrow">AI &amp; automation</span>
+                <h2>Alto Vale IA</h2>
+                <p>My work with artificial intelligence, agents and automation lives at <b>altovaleia.com</b> — AI integrations (GPT API), autonomous agents, process automation and rapid prototyping of AI-powered products.</p>
+                <div class="tags">
+                <span class="tag">GPT API</span>
+                <span class="tag">AI Agents</span>
+                <span class="tag">Automation</span>
+                <span class="tag">Claude Code</span>
+                <span class="tag">Lovable</span>
+                <span class="tag">Rapid Prototyping</span>
+                </div>
+              </div>
+              <div class="feature-side">
+                <span class="domain"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><path d="M3 12h18M12 2.8c2.4 2.5 3.6 5.6 3.6 9.2S14.4 18.7 12 21.2c-2.4-2.5-3.6-5.6-3.6-9.2S9.6 5.3 12 2.8Z"/></svg> altovaleia.com</span>
+                <a class="btn btn-primary" href="https://altovaleia.com" target="_blank" rel="noopener" style="justify-content:center">Visit altovaleia.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="band">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <span class="eyebrow">Education</span>
+            <h2>Academic background</h2>
+          </div>
+          <div class="edu-grid">
+            <article class="card edu reveal">
+              <div class="logo-tile"><img src="unidavi.png" alt="UNIDAVI — Universidade para o Desenvolvimento do Alto Vale do Itajaí" loading="lazy" width="54" height="54" /></div>
+              <div>
+                <h3>Bachelor of Information Systems</h3>
+                <p class="tl-org">UNIDAVI — Universidade para o Desenvolvimento do Alto Vale do Itajaí</p>
+                <p class="tl-meta"><span>Rio do Sul, Brazil</span><span class="sep">·</span><span>2015 — 2018</span></p>
+              </div>
+            </article>
+            <article class="card edu reveal">
+              <div class="logo-tile"><img src="descomplica.png" alt="Descomplica" loading="lazy" width="54" height="54" /></div>
+              <div>
+                <h3>MBA, Information Security</h3>
+                <p class="tl-org">Descomplica</p>
+                <p class="tl-meta"><span>Brazil</span><span class="sep">·</span><span>2021 — 2022</span></p>
+              </div>
+            </article>
+            <article class="card edu reveal">
+              <div class="logo-tile"><img src="descomplica.png" alt="Descomplica" loading="lazy" width="54" height="54" /></div>
+              <div>
+                <h3>Postgraduate, Software Analysis and Development</h3>
+                <p class="tl-org">Descomplica</p>
+                <p class="tl-meta"><span>Brazil</span><span class="sep">·</span><span>2021 — 2022</span></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="band">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <span class="eyebrow">Contact</span>
+            <h2>Let's build something that scales</h2>
+            <p>Available for senior engineering and tech lead opportunities — remote across LATAM or hybrid in Santa Catarina, Brazil.</p>
+          </div>
+          <div class="contact-grid">
+            <a class="ccard reveal" href="mailto:viniciusdalastra@hotmail.com">
+              <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <span>Email</span>
+              <b>viniciusdalastra@hotmail.com</b>
+            </a>
+            <a class="ccard reveal" href="https://www.linkedin.com/in/dalastraa" target="_blank" rel="noopener">
+              <span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C21.4 8.75 22 11 22 14.1V21h-4v-6.1c0-1.46-.03-3.34-2.05-3.34-2.06 0-2.37 1.6-2.37 3.24V21h-3.6z"/></svg></span>
+              <span>LinkedIn</span>
+              <b>linkedin.com/in/dalastraa</b>
+            </a>
+            <a class="ccard reveal" href="https://wa.me/5547996434266" target="_blank" rel="noopener">
+              <span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.6 2 2.18 6.4 2.18 11.82c0 1.73.46 3.42 1.32 4.9L2 22.4l5.83-1.52a9.9 9.9 0 0 0 4.2.94h.01c5.44 0 9.86-4.4 9.86-9.82S17.48 2 12.04 2Zm0 17.98h-.01a8.2 8.2 0 0 1-4.16-1.14l-.3-.18-3.46.9.92-3.36-.2-.34a8.1 8.1 0 0 1-1.25-4.34c0-4.5 3.68-8.16 8.2-8.16 2.19 0 4.25.85 5.8 2.4a8.13 8.13 0 0 1 2.4 5.78c0 4.5-3.68 8.16-8.2 8.16Zm4.5-6.11c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.12-.56.13-.16.24-.63.8-.78.96-.14.17-.28.19-.53.06-.24-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.45-1.37-1.7-.15-.24-.02-.37.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.42.06-.64.3-.22.25-.84.82-.84 2s.86 2.32.98 2.48c.12.17 1.7 2.58 4.1 3.62.58.25 1.02.4 1.37.5.58.19 1.1.16 1.52.1.46-.07 1.46-.6 1.66-1.17.21-.58.21-1.07.15-1.17-.06-.11-.22-.17-.47-.3Z"/></svg></span>
+              <span>WhatsApp</span>
+              <b>+55 (47) 99643-4266</b>
+            </a>
+            <a class="ccard reveal" href="https://altovaleia.com" target="_blank" rel="noopener">
+              <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><path d="M3 12h18M12 2.8c2.4 2.5 3.6 5.6 3.6 9.2S14.4 18.7 12 21.2c-2.4-2.5-3.6-5.6-3.6-9.2S9.6 5.3 12 2.8Z"/></svg></span>
+              <span>Alto Vale IA</span>
+              <b>altovaleia.com</b>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap foot">
+        <p>© <span id="year">2026</span> Vinícius Dalastra — Built with plain HTML &amp; CSS — hosted on GitHub Pages.</p>
+        <div class="foot-links">
+          <a href="mailto:viniciusdalastra@hotmail.com">viniciusdalastra@hotmail.com</a>
+          <a href="https://www.linkedin.com/in/dalastraa" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/viniciusdalastra" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://altovaleia.com" target="_blank" rel="noopener">altovaleia.com</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+(function(){
+  var burger=document.querySelector('.burger'),menu=document.getElementById('nav-links');
+  if(burger&&menu){
+    burger.addEventListener('click',function(){
+      var open=menu.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded',open?'true':'false');
+    });
+    menu.addEventListener('click',function(e){
+      if(e.target.tagName==='A'){menu.classList.remove('is-open');burger.setAttribute('aria-expanded','false');}
+    });
+  }
+  var y=document.getElementById('year'); if(y){y.textContent=new Date().getFullYear();}
+
+  if(!('IntersectionObserver' in window)){
+    Array.prototype.forEach.call(document.querySelectorAll('.reveal'),function(el){el.classList.add('is-in');});
+    return;
+  }
+  var ro=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('is-in');ro.unobserve(en.target);} });
+  },{rootMargin:'0px 0px -8% 0px',threshold:.06});
+  Array.prototype.forEach.call(document.querySelectorAll('.reveal'),function(el){ro.observe(el);});
+
+  var sections=[].slice.call(document.querySelectorAll('main section[id]'));
+  var links={};
+  Array.prototype.forEach.call(document.querySelectorAll('.nav-links a[href^="#"]'),function(a){
+    links[a.getAttribute('href').slice(1)]=a;
+  });
+  if(sections.length){
+    var so=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        var a=links[en.target.id]; if(!a) return;
+        if(en.isIntersecting){
+          Object.keys(links).forEach(function(k){links[k].classList.remove('is-active');});
+          a.classList.add('is-active');
+        }
+      });
+    },{rootMargin:'-45% 0px -50% 0px',threshold:0});
+    sections.forEach(function(s){so.observe(s);});
+  }
+})();
+</script>
   </body>
 </html>
