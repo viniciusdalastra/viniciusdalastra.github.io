@@ -1,0 +1,37 @@
+# Vinícius Dalastra
+
+> Senior Full-Stack Engineer with 10+ years building scalable, secure platforms across payments,
+> SaaS, real-time messaging, e-commerce and public-sector systems. Based in Santa Catarina, Brazil;
+> available remotely across LATAM. Portuguese (native), English (C1).
+
+Personal portfolio and CV of Vinícius Dalastra. The site is a static two-language site
+(English at the root, Brazilian Portuguese under /pt-br/) with no framework and no external requests.
+
+## Summary
+
+- **Role**: Senior Full-Stack Engineer / Tech Lead, backend specialist.
+- **Experience**: 10+ years (since 2015).
+- **Core stack**: Node.js (TypeScript), NestJS, Express, Angular, React, Next.js, MongoDB,
+  PostgreSQL, MS SQL Server, Redis, Docker, CI/CD, AWS, Azure.
+- **Specialities**: microservices, REST and Graph APIs, event-driven architecture, webhooks,
+  WebSockets, payment gateways, SQL optimization, information security (LGPD/GDPR),
+  AI integrations (GPT API, agents, automation).
+- **Track record**: payment gateway supporting R$1.8B+ in processed sales across 3,000+ e-commerce
+  platforms; omnichannel messaging platform handling millions of real-time messages; supplier
+  portals serving 15,000+ suppliers; led an 8-person engineering squad.
+- **Contact**: viniciusdalastra@hotmail.com · +55 47 99643-4266 · linkedin.com/in/dalastraa
+
+## Pages
+
+- [Portfolio (English)](https://viniciusdalastra.github.io/): full CV — summary, core skills,
+  professional experience, selected projects, education and contact.
+- [Portfólio (Português)](https://viniciusdalastra.github.io/pt-br/): the same content in
+  Brazilian Portuguese.
+- [Full CV as plain text](https://viniciusdalastra.github.io/llms-full.txt): the complete
+  experience, projects and education in Markdown, ready to read without parsing HTML.
+
+## Related
+
+- [Alto Vale IA](https://altovaleia.com): work with artificial intelligence, agents and automation.
+- [GitHub](https://github.com/viniciusdalastra): source of this site and other projects.
+- [LinkedIn](https://www.linkedin.com/in/dalastraa): professional profile.

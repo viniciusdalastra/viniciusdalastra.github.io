@@ -1,0 +1,136 @@
+# Vinícius Dalastra — Senior Full-Stack Engineer
+
+Brazil · Remote (LATAM) · +55 47 99643-4266 · viniciusdalastra@hotmail.com
+linkedin.com/in/dalastraa · github.com/viniciusdalastra · altovaleia.com
+English (C1) · Portuguese (Native)
+
+Source: https://viniciusdalastra.github.io/ (English) and https://viniciusdalastra.github.io/pt-br/ (Portuguese).
+Last updated: 2026-08-26.
+
+## Professional summary
+
+Senior Full-Stack Engineer with 10+ years building scalable, secure platforms across payments, SaaS, real-time messaging, e-commerce and public-sector systems. I have delivered solutions supporting **15,000+ concurrent users** and backend messaging flows reaching **hundreds of millions of interactions**, and led payment systems processing **R$1.8B+ in transactions**. My core stack is Node.js (TypeScript), NestJS and Express on the backend, Angular / React / Next.js on the frontend, with MongoDB, PostgreSQL and MS SQL Server, Docker, CI/CD and AWS & Azure. I work daily with microservices, REST and Graph APIs, event-driven architecture, webhooks and WebSockets. I also build AI integrations (GPT API, agents, automation) and use AI-assisted development tools such as Claude Code and Lovable for coding, refactoring, testing and rapid prototyping.
+
+## Core skills
+
+- **Backend**: Node.js, TypeScript, NestJS, Express, Microservices, REST APIs, Graph APIs, Webhooks, WebSockets, Event-driven, SOAP
+- **Frontend**: Angular, React, Next.js, JavaScript, HTML, CSS
+- **Data**: MongoDB, PostgreSQL, MS SQL Server, REDIS, SQL Optimization
+- **Cloud & DevOps**: AWS, Azure, Docker, CI/CD, GitHub
+- **AI & Automation**: GPT API, AI Agents, Automation, Claude Code, Lovable, AI-Assisted Dev
+- **Security**: Secure by design, LGPD / GDPR, Data protection, Access control
+
+## Professional experience
+
+### Senior Full Stack Engineer — Unidas
+*Jan 2025 — Present · Brazil · Full-Time*
+
+- Led modernization of Supplier, Negotiation and Procurement portals, migrating legacy Delphi to a web architecture via REST APIs serving **15,000+ suppliers**.
+- Refactored Node.js/Angular services (JavaScript/TypeScript) to LTS versions, improving stability, security and maintainability.
+- Optimized critical MS SQL procedures, reducing execution time from **~20s to <1s** and improving responsiveness.
+- Directed architecture and security restructuring, lowering infrastructure costs and improving sustainability.
+- Managed the coexistence of legacy and web systems during migration to ensure continuity and business alignment.
+
+Technologies: Angular, Node.js (LTS), TypeScript, Express, MS SQL Server, Azure, Docker, REST APIs
+
+### Tech Lead / Senior Full-Stack Engineer — Omnismart
+*Mar 2023 — Dec 2024 · Brazil · Full-Time*
+
+- Led design and delivery of an omnichannel messaging platform (WhatsApp, Facebook, Instagram, Telegram, Web Widget) with AI agents using the GPT API.
+- Engineered microservices and WebSocket architecture processing **millions of real-time messages** with thousands of concurrent users.
+- Partnered with MongoDB official consulting to redesign the data model and indexes, cutting query latency from **~30s to <300ms** across hundreds of millions of records.
+- Led an **8-person engineering squad**, removing blockers and aligning delivery with product and business objectives.
+
+Technologies: Angular, Node.js, TypeScript, NestJS, MongoDB, AWS, Docker, Webhooks, WebSockets, REDIS, GPT API, Event-driven
+
+### Senior Full Stack Engineer — Bullcode
+*Nov 2022 — Jul 2024 · Brazil · Freelancer*
+
+- Built full-stack systems including a **3D virtual fitting widget**, a ticketing platform and a real-estate negotiation portal with responsive cross-device UX.
+- Delivered end-to-end features using modular architecture, accelerating development cycles and reducing rework.
+- Implemented automated test suites with high coverage, increasing reliability and reducing production defects.
+- Strengthened CI/CD practices, improving delivery speed and engineering consistency.
+
+Technologies: Node.js, TypeScript, Express, React, Next.js, Docker, GitHub, REDIS, CI/CD
+
+### Systems Information Professor — FIESC
+*May 2023 — Jun 2024 · Brazil · Part-Time*
+
+- Taught Logic Programming, Data Structures and Algorithms, strengthening computational thinking and software engineering foundations.
+- Designed practical exercises and coding projects, increasing real-world problem-solving and algorithmic reasoning skills.
+- Mentored students on complex technical challenges, preparing talent for software development careers.
+
+### Senior Full Stack Engineer — Magazord
+*Jan 2023 — Mar 2023 · Brazil · Full-Time*
+
+- Designed and built a scalable payment gateway for **3,000+ e-commerce platforms**, integrating multiple payment providers with secure, compliant defaults.
+- Improved transaction reliability, reduced integration errors and enhanced processing scalability.
+- Enabled infrastructure capable of supporting **R$1.8B+ in processed sales** across 2,500+ operations (2024), increasing client satisfaction.
+
+Technologies: Node.js, TypeScript, NestJS, MongoDB, PostgreSQL, Docker, GitHub, REDIS, CI/CD
+
+### Full Stack Engineer — career progression — IPM Sistemas
+*Jun 2015 — Dec 2022 · Brazil · Full-Time · Intern → Specialist*
+
+**Specialist Full Stack Engineer** — *Jun 2021 — Dec 2022*
+
+- Led internal framework modernization used company-wide, improving developer productivity, stability and architectural consistency.
+- Co-developed an automated full-stack code generator (frontend screens, backend scaffolding, relational schemas end-to-end), reducing module delivery time.
+- Implemented secure, high-performance defaults to prevent data exposure and support LGPD/GDPR compliance.
+- Provided cross-squad technical leadership on security fixes and scalability improvements.
+
+**Tech Lead & Senior Full Stack Engineer** — *May 2019 — Nov 2020*
+
+- Led the full product lifecycle for Transparency Portal, Digital Self-Service and Digital Process modules, improving public data availability during the pandemic.
+- Optimized high-volume SQL queries over millions of government records, reducing latency and improving reliability.
+- Coordinated releases and guided architecture decisions to ensure long-term maintainability.
+
+**Mid-Level Full Stack Developer** — *Feb 2016 — May 2019*
+
+- Delivered corrective and evolutionary improvements for public-sector accounting systems, ensuring regulatory compliance and audit readiness.
+- Developed and optimized financial SQL routines and government reporting sent to federal agencies.
+- Improved data accuracy and reliability, strengthening accountability workflows.
+
+**Full Stack Development Intern** — *Jun 2015 — Feb 2016*
+
+- Delivered new feature development and report optimizations for public accounting modules.
+- Implemented performance and usability improvements, leading to promotion to Full Stack Developer in under a year.
+
+Technologies: SQL, JavaScript, PHP, PostgreSQL, REST, SOAP, Docker
+
+## Selected projects
+
+### Scalable Payment Gateway Platform — Magazord · 2024
+Designed and built a payment gateway serving 3,000+ e-commerce platforms, integrating multiple providers with a secure, compliant architecture.
+
+Highlights: R$1.8B+ in processed sales; 3,000+ e-commerces; 2,500+ operations
+
+### Omnichannel AI Messaging Platform — Omnismart · 2023–2024
+Architected real-time microservices and WebSocket infrastructure processing millions of messages across WhatsApp, Instagram, Facebook, Telegram and Web.
+
+Highlights: 30s → 300ms MongoDB query latency; 100M+ records; 8 engineers led
+
+### Government Transparency & Digital Services — IPM Sistemas · 2019–2022
+Led backend optimization and modernization of public-sector digital services, improving performance across millions of government records and ensuring regulatory compliance.
+
+Highlights: Millions of public records; LGPD compliance; 3 platform modules
+
+## AI-assisted development
+
+- **Claude Code**: daily coding and refactoring, project scaffolding, code review, test generation
+  and technical documentation in personal projects.
+- **Lovable**: building MVPs for clients and rapid prototyping of web applications.
+
+## Education
+
+- **Bachelor of Information Systems** — UNIDAVI — Universidade para o Desenvolvimento do Alto Vale do Itajaí, Rio do Sul, Brazil (2015 — 2018)
+- **MBA, Information Security** — Descomplica, Brazil (2021 — 2022)
+- **Postgraduate, Software Analysis and Development** — Descomplica, Brazil (2021 — 2022)
+
+## Contact
+
+- Email: viniciusdalastra@hotmail.com
+- WhatsApp / phone: +55 47 99643-4266
+- LinkedIn: https://www.linkedin.com/in/dalastraa
+- GitHub: https://github.com/viniciusdalastra
+- Alto Vale IA: https://altovaleia.com
